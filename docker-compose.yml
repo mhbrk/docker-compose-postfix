@@ -1,0 +1,16 @@
+version: '2'
+services:
+  postfix:
+    container_name: "project_postfix"
+    hostname:       "project_postfix"
+    image: catatnight/postfix
+    restart: always
+    ports:
+      - "2525:25"
+      - "587:587"
+    volumes:
+      - ./config/certs:/etc/postfix/certs
+      - ./config/opendkim:/etc/opendkim/domainkeys
+    environment:
+      - maildomain=example.com
+      - smtp_user=user1:pwd1,user2:pwd2
