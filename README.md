@@ -40,6 +40,9 @@
    * `dig CNAME mail.example.com`
 * verify domain in Google:
    * https://support.google.com/a/answer/183895
+* spam check:
+   * https://spamcheck.postmarkapp.com/
+   * https://spamassassin.apache.org/
   
 ### check mail
 * genegate auth for telnet:
