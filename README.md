@@ -32,7 +32,7 @@
   * (activate in panel)
   * add TXT record:
     * mail TXT <from file ./config/opendkim/example.txt>
-  * if needed - add ADSP (for deny other servers receive mails without sign, with my domain):
+  * if needed - add ADSP (for deny other servers receive mails without sign, with my domain): #OLD
     * `_adsp._domainkey IN TXT "dkim=all"`
 * check:
    * `dig A mail.example.com`
