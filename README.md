@@ -3,6 +3,7 @@
 ### start
 * `cd config/certs/ && openssl req -new -nodes -keyout smtp.key -out smtp.csr`
 * `cd ../../ && opendkim-genkey -D ./config/opendkim/ -d $(hostname -d) -s $(hostname)`
+  * # opendkim-genkey -D /etc/opendkim/domainkeys -d example.com -s mail
 * `docker-compose up -d`
 * if don't need DKIM:
   * `docker-compose exec postfix bash`
