@@ -12,5 +12,5 @@ services:
       - ./config/certs:/etc/postfix/certs
       - ./config/opendkim:/etc/opendkim/domainkeys
     environment:
-      - maildomain=example.com
+      - maildomain=mail.example.com
       - smtp_user=user1:pwd1,user2:pwd2
