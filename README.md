@@ -5,7 +5,7 @@
 * `cd ../../ && opendkim-genkey -D ./config/opendkim/ -d $(hostname -d) -s $(hostname)`
 * `docker-compose up -d`
 * if don't need DKIM:
-  * `docker-compose exec postfis bash`
+  * `docker-compose exec postfix bash`
   * comment following strings in /etc/postfix/main.cf
    ```
    milter_protocol = 2
