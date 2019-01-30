@@ -2,8 +2,8 @@
 
 ### start
 * `cd config/certs/ && openssl req -new -nodes -keyout smtp.key -out smtp.csr`
-* `cd ../../ && opendkim-genkey -D ./config/opendkim/ -d $(hostname -d) -s $(hostname)`
-  * `opendkim-genkey -D /etc/opendkim/domainkeys -d example.com -s mail`
+* `cd ../../ && `opendkim-genkey -D /etc/opendkim/domainkeys -d example.com -s mail`
+  * opendkim-genkey -D ./config/opendkim/ -d $(hostname -d) -s $(hostname)` 
 * `docker-compose up -d`
 * if don't need DKIM:
   * `docker-compose exec postfix bash`
@@ -31,7 +31,7 @@
 * DKIM config:
   * (activate in panel)
   * add TXT record:
-    * mail TXT <from file ./config/opendkim/example.txt>
+    * mail._domainkey TXT <from file ./config/opendkim/mail.txt>
   * if needed - add ADSP (for deny other servers receive mails without sign, with my domain): #OLD
     * `_adsp._domainkey IN TXT "dkim=all"`
 * check:
