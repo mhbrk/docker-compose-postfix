@@ -13,4 +13,5 @@ services:
       - ./config/opendkim:/etc/opendkim/domainkeys
     environment:
       - maildomain=mail.example.com
+      # maildomain=example.com
       - smtp_user=user1:pwd1,user2:pwd2
