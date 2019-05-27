@@ -74,7 +74,9 @@
   * `UEFTU1dPUkQ=`
   ```
   235 2.7.0 Authentication successful
-  mail from: test@example.com
+  ```
+  * `mail from: test@example.com`
+  ```
   250 2.1.0 Ok
   ```
   * `rcpt to: user@mail.com`
